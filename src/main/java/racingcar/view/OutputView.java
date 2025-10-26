@@ -1,6 +1,7 @@
 package racingcar.view;
 
 
+import racingcar.domain.Cars;
 import racingcar.domain.RacingGame;
 
 public class OutputView {
@@ -10,8 +11,8 @@ public class OutputView {
         racingGame.raceResultPrint();
     }
 
-    public static void outputWinner(RacingGame racingGame) {
-        racingGame.printWinners();
+    public static void outputWinner(RacingGame racingGame, Cars cars) {
+        racingGame.printWinners(cars);
     }
 
 }
