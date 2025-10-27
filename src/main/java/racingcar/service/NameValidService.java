@@ -11,13 +11,14 @@ import static racingcar.constants.Regex.NAME_SPLIT;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class NameValidService {
     private final static int MINIMUM_NUMBER_OF_PARTICIPANTS = 2;
     private final static int MAXIMUM_NAME_LENGTH = 5;
 
-    public void nameInputValid(String inputName) {
+    public List<String> nameInputValid(String inputName) {
         inputNameEmptyValid(inputName);
         String[] names = splitNameValid(inputName);
         numberParticipantsValid(names);
@@ -27,6 +28,7 @@ public class NameValidService {
             nameLengthValid(name);
         }
         sameNameValid(names);
+        return Arrays.asList(names);
     }
 
     private void inputNameEmptyValid(String inputName) {

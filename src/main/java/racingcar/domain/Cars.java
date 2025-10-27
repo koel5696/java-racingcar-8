@@ -1,8 +1,5 @@
 package racingcar.domain;
 
-import static racingcar.constants.Regex.NAME_SPLIT;
-
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -10,8 +7,8 @@ import java.util.stream.Collectors;
 public class Cars {
     private final List<Car> cars;
 
-    public Cars(String inputName) {
-        this.cars = Arrays.stream(inputName.split(NAME_SPLIT.getRegex()))
+    public Cars(List<String> cars) {
+        this.cars = cars.stream()
                 .map(Car::new)
                 .collect(Collectors.toList());
     }

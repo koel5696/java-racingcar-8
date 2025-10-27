@@ -1,5 +1,6 @@
 package racingcar.controller;
 
+import java.util.List;
 import racingcar.domain.Cars;
 import racingcar.domain.RacingGame;
 import racingcar.service.NameValidService;
@@ -13,8 +14,8 @@ public class RacingGameController {
 
     public void run() {
         String word = InputView.nameInput();
-        nameValidService.nameInputValid(word);
-        Cars cars = new Cars(word);
+        List<String> validNames = nameValidService.nameInputValid(word);
+        Cars cars = new Cars(validNames);
 
         int round = roundValidService.roundInputValid(InputView.roundInput());
         RacingGame racingGame = new RacingGame(cars);

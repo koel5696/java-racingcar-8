@@ -11,11 +11,13 @@ public class CarsTest {
     private static final int MAX_DISTANCE = 5;
     private static final int MOVING_FORWARD = 4;
     private static final int STOP = 3;
+    private static final String[] names = {"benz", "urus", "ray"};
+
 
     @Test
     void 전체_자동차_전진_테스트() {
         assertRandomNumberInRangeTest(() -> {
-            Cars cars = new Cars("benz,urus,ray");
+            Cars cars = new Cars(Arrays.asList(names));
             cars.moveCars();
 
             List<String> expected = Arrays.asList("benz : -", "urus : -", "ray : -");
@@ -26,7 +28,7 @@ public class CarsTest {
     @Test
     void 우승자_찾기_테스트() {
         assertRandomNumberInRangeTest(() -> {
-            Cars cars = new Cars("benz,urus,ray");
+            Cars cars = new Cars(Arrays.asList(names));
             for (int i = 0; i < MAX_DISTANCE; i++) {
                 cars.moveCars();
             }
