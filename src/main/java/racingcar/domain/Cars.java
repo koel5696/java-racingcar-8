@@ -23,12 +23,12 @@ public class Cars {
     public List<String> findWinners() {
         int maxDistance = findMaxDistance();
         return cars.stream()
-                .map(car -> car.announceIfWinner(maxDistance))
+                .map(car -> car.saveWinners(maxDistance))
                 .flatMap(Optional::stream)
                 .toList();
     }
 
-    public List<String> toStringAll() {
+    public List<String> toStringCarsList() {
         return cars.stream()
                 .map(Car::toString)
                 .toList();

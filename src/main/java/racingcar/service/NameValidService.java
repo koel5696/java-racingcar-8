@@ -51,14 +51,14 @@ public class NameValidService {
         }
     }
 
-    private void inputFormatValid(String name) {
-        if (!name.matches(NAME_INPUT.getRegex())) {
+    private void inputFormatValid(String carName) {
+        if (!carName.matches(NAME_INPUT.getRegex())) {
             throw new IllegalArgumentException(NAME_FORMAT_FORMAT_ERROR.getMessage());
         }
     }
 
-    private void nameLengthValid(String name) {
-        if (name.length() > MAXIMUM_NAME_LENGTH) {
+    private void nameLengthValid(String carName) {
+        if (carName.length() > MAXIMUM_NAME_LENGTH) {
             throw new IllegalArgumentException(NAME_LENGTH_ERROR.getMessage());
         }
     }

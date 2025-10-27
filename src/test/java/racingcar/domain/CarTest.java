@@ -28,7 +28,7 @@ public class CarTest {
                 car.goOrStop();
             }
 
-            Optional<String> winner = car.announceIfWinner(MAX_DISTANCE);
+            Optional<String> winner = car.saveWinners(MAX_DISTANCE);
 
             assertThat(winner).hasValue("benz");
         }, MOVING_FORWARD);

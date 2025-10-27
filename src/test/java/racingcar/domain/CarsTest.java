@@ -19,7 +19,7 @@ public class CarsTest {
             cars.moveCars();
 
             List<String> expected = Arrays.asList("benz : -", "urus : -", "ray : -");
-            assertThat(cars.toStringAll()).isEqualTo(expected);
+            assertThat(cars.toStringCarsList()).isEqualTo(expected);
         }, MOVING_FORWARD);
     }
 

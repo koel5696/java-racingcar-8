@@ -17,7 +17,7 @@ public class RacingGame {
     public void startRace(int round) {
         for (int i = 0; i < round; i++) {
             cars.moveCars();
-            raceHistory.add(cars.toStringAll());
+            raceHistory.add(cars.toStringCarsList());
         }
     }
 
@@ -28,7 +28,7 @@ public class RacingGame {
         }
     }
 
-    public void printWinners(Cars cars) {
+    public void WinnersPrint(Cars cars) {
         List<String> winners = cars.findWinners();
         String result = String.join(NAME_SPLIT.getRegex(), winners);
         System.out.println(PRINT_GAME_WINNERS_MESSAGE.getMessage() + result);
