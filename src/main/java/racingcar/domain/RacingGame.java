@@ -33,7 +33,5 @@ public class RacingGame {
         String result = String.join(WINNERS_NAME_SPLIT.getRegex(), winners);
         System.out.println(PRINT_GAME_WINNERS_MESSAGE.getMessage() + result);
     }
-
-
 }
 

@@ -16,5 +16,4 @@ public class OutputView {
     public static void outputWinner(RacingGame racingGame, Cars cars) {
         racingGame.WinnersPrint(cars);
     }
-
 }

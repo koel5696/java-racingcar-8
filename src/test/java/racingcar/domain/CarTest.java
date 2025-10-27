@@ -33,5 +33,4 @@ public class CarTest {
             assertThat(winner).hasValue("benz");
         }, MOVING_FORWARD);
     }
-
 }
