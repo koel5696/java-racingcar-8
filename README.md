@@ -60,24 +60,27 @@
     - `InputView` : 사용자에게 경주를 진행할 자동차 이름과 진행 횟수를 입력받는다.
     - `OutputView` : 경주 결과와 최종 우승자를 출력한다.
 
-1. 입력 검증 Service
+2. 입력 검증 Service
     - `NameValidService` : 자동차 이름 입력을 검증한다.
     - `RoundValidService`: 라운드 횟수 입력을 검증한다.
 
-2. 게임 총괄 domain
+3. 게임 총괄 domain
     - `Car` : 입력된 각 자동차의 이름과 전진 유무를 저장하고 관리할 클래스.
     - `Cars` : 경주를 진행할 자동차들을 관리하는 일급 컬렉션.
     - `RacingGame` : 게임을 실행하고 결과를 관리하는 클래스.
 
-1. 게임 진행 Controller
+4. 게임 진행 Controller
     - `RacingGameController` : 프로그램을 실행하여 전체 흐름을 관리하는 클래스.
         - view와 domian, sevice를 오가며 게임 진행을 맡음.
 
-2. 전제 상수 관리 enum
+5. 전제 상수 관리 enum
     - `GameGuideMessage` : 게임 진행 I/O 안내 메시지 상수.
     - `NameInputException` : 자동차 이름 입력 예외 메시지 상수.
     - `RoundInputException`: 진행 횟수 입력 예외 메시지 상수.
     - `Regex` : 게임 형식 규정에 대한 정규식 상수.
+
+6. 랜덤 난수 추출 util
+    - `CreateRandomNumber` : 랜덤 난수 추출 유틸리티 클래스.
 
 ```jsx
 src / main / java /
@@ -100,6 +103,9 @@ src / main / java /
 ├── service /
 │   ├── NameValidService.java
 │   └── RoundValidService.java
+│
+├── util
+│   ├── CreateRandomNumber.java
 │
 ├── view /
 │   ├── InputView.java
