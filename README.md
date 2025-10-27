@@ -106,25 +106,19 @@ src / main / java /
 │   └── OutputView.java
 │
 └── Application.java
-:
-10240407
-: **
-상세
-기능
-구현
-방향 **
+
 ```
 
 **테스트 사항**
 ---
 
 1. 게임 진행 로직 테스트
-    - CarTest : 랜덤값을 임의로 지정해 전진 유무를 체크하고 우승자를 확인함.
-    - CarsTest: 자동차 전체 전진 로직을 확인하고, 우승자를 최종적으로 찾아서 저장하는지 확인함.
+    - `CarTest` : 랜덤값을 임의로 지정해 전진 유무를 체크하고 우승자를 확인함.
+    - `CarsTest`: 자동차 전체 전진 로직을 확인하고, 우승자를 최종적으로 찾아서 저장하는지 확인함.
 
 2. 입력 검증 테스트
-    - NameValidServiceTest : 이름 입력에 대한 예외 테스트를 진행함.
-    - RoundValidServiceTest : 진행 횟수 입력에 대한 예외 테스트를 진행함.
+    - `NameValidServiceTest` : 이름 입력에 대한 예외 테스트를 진행함.
+    - `RoundValidServiceTest` : 진행 횟수 입력에 대한 예외 테스트를 진행함.
 
 3. 전체 로직 테스트
-    - ApplicationTest : 입력값에 대한 올바른 출력을 확인함.
+    - `ApplicationTest` : 입력값에 대한 올바른 출력을 확인함.
