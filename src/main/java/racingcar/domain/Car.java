@@ -23,7 +23,7 @@ public class Car {
         }
     }
 
-    public Optional<String> saveWinners(int maxDistance) {
+    public Optional<String> saveWinner(int maxDistance) {
         if (forwardCount == maxDistance) {
             return Optional.of(carName);
         }

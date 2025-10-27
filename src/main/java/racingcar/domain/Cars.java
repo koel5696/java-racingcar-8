@@ -21,7 +21,7 @@ public class Cars {
     public List<String> findWinners() {
         int maxDistance = findMaxDistance();
         return cars.stream()
-                .map(car -> car.saveWinners(maxDistance))
+                .map(car -> car.saveWinner(maxDistance))
                 .flatMap(Optional::stream)
                 .toList();
     }

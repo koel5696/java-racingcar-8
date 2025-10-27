@@ -42,7 +42,7 @@ public class CarTest {
             car.goOrStop(MOVING_FORWARD);
         }
 
-        Optional<String> winner = car.saveWinners(MAX_DISTANCE);
+        Optional<String> winner = car.saveWinner(MAX_DISTANCE);
         assertThat(winner).hasValue("benz");
 
     }
