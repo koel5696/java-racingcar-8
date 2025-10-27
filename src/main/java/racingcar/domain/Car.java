@@ -1,10 +1,17 @@
 package racingcar.domain;
 
 
+import static racingcar.constants.Regex.FORWARD_EXPRESS;
+import static racingcar.constants.Regex.NAME_SEPARATOR;
+
 import camp.nextstep.edu.missionutils.Randoms;
 import java.util.Optional;
 
 public class Car {
+    public static final int RANDOM_DIGIT_MIN = 0;
+    public static final int RANDOM_DIGIT_MAX = 9;
+    public static final int MOVING_FORWARD = 4;
+
     private final String carName;
     private int forwardCount;
 
@@ -14,12 +21,12 @@ public class Car {
     }
 
     public void goOrStop() {
-        if (Randoms.pickNumberInRange(0, 9) >= 4) {
+        if (Randoms.pickNumberInRange(RANDOM_DIGIT_MIN, RANDOM_DIGIT_MAX) >= MOVING_FORWARD) {
             forwardCount++;
         }
     }
 
-    public Optional<String> announceIfWinner(int maxDistance) {
+    public Optional<String> saveWinners(int maxDistance) {
         if (forwardCount == maxDistance) {
             return Optional.of(carName);
         }
@@ -35,7 +42,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return carName + " : " + "-".repeat(forwardCount);
+        return carName + NAME_SEPARATOR.getRegex() + FORWARD_EXPRESS.getRegex().repeat(forwardCount);
     }
 
 }
