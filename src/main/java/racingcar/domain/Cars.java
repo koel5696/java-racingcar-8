@@ -3,6 +3,7 @@ package racingcar.domain;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import racingcar.util.CreateRandomNumber;
 
 public class Cars {
     private final List<Car> cars;
@@ -14,7 +15,7 @@ public class Cars {
     }
 
     public void moveCars() {
-        cars.forEach(Car::goOrStop);
+        cars.forEach(car -> car.goOrStop(CreateRandomNumber.createRandomNumber()));
     }
 
     public List<String> findWinners() {
