@@ -5,6 +5,7 @@ public enum Regex {
     ROUND_INPUT("^[1-9]\\d*$"),
     NEWLINE("\n"),
     NAME_SPLIT(","),
+    WINNERS_NAME_SPLIT(", "),
     FORWARD_EXPRESS("-"),
     NAME_SEPARATOR(" : ");
 

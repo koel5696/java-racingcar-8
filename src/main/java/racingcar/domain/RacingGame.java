@@ -1,7 +1,7 @@
 package racingcar.domain;
 
 import static racingcar.constants.GameGuideMessage.PRINT_GAME_WINNERS_MESSAGE;
-import static racingcar.constants.Regex.NAME_SPLIT;
+import static racingcar.constants.Regex.WINNERS_NAME_SPLIT;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +30,7 @@ public class RacingGame {
 
     public void WinnersPrint(Cars cars) {
         List<String> winners = cars.findWinners();
-        String result = String.join(NAME_SPLIT.getRegex(), winners);
+        String result = String.join(WINNERS_NAME_SPLIT.getRegex(), winners);
         System.out.println(PRINT_GAME_WINNERS_MESSAGE.getMessage() + result);
     }
 
